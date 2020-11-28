@@ -52,43 +52,47 @@
 			</view>
 			<view class="tui-product-list">
 				<view class="tui-product-container">
-					<block v-for="(item, index) in productList" :key="index" v-if="(index + 1) % 2 != 0">
-						<!--商品列表-->
-						<view class="tui-pro-item" hover-class="hover" :hover-start-time="150" @tap="detail">
-							<image :src="'/static/images/mall/product/' + item.img + '.jpg'" class="tui-pro-img" mode="widthFix" />
-							<view class="tui-pro-content">
-								<view class="tui-pro-tit">{{ item.name }}</view>
-								<view>
-									<view class="tui-pro-price">
-										<text class="tui-sale-price">￥{{ item.sale }}</text>
-										<text class="tui-factory-price">￥{{ item.factory }}</text>
+					<template v-for="(item, index) in productList">
+						<block  :key="index" v-if="(index + 1) % 2 != 0">
+							<!--商品列表-->
+							<view class="tui-pro-item" hover-class="hover" :hover-start-time="150" @tap="detail">
+								<image :src="'/static/images/mall/product/' + item.img + '.jpg'" class="tui-pro-img" mode="widthFix" />
+								<view class="tui-pro-content">
+									<view class="tui-pro-tit">{{ item.name }}</view>
+									<view>
+										<view class="tui-pro-price">
+											<text class="tui-sale-price">￥{{ item.sale }}</text>
+											<text class="tui-factory-price">￥{{ item.factory }}</text>
+										</view>
+										<view class="tui-pro-pay">{{ item.payNum }}人付款</view>
 									</view>
-									<view class="tui-pro-pay">{{ item.payNum }}人付款</view>
 								</view>
 							</view>
-						</view>
-						<!--商品列表-->
-						<!-- <template is="productItem" data="{{item,index:index}}" /> -->
-					</block>
+							<!--商品列表-->
+							<!-- <template is="productItem" data="{{item,index:index}}" /> -->
+						</block>
+					</template>
 				</view>
 				<view class="tui-product-container">
-					<block v-for="(item, index) in productList" :key="index" v-if="(index + 1) % 2 == 0">
-						<!--商品列表-->
-						<view class="tui-pro-item" hover-class="hover" :hover-start-time="150" @tap="detail">
-							<image :src="'/static/images/mall/product/' + item.img + '.jpg'" class="tui-pro-img" mode="widthFix" />
-							<view class="tui-pro-content">
-								<view class="tui-pro-tit">{{ item.name }}</view>
-								<view>
-									<view class="tui-pro-price">
-										<text class="tui-sale-price">￥{{ item.sale }}</text>
-										<text class="tui-factory-price">￥{{ item.factory }}</text>
+					<template v-for="(item, index) in productList">
+						<block :key="index" v-if="(index + 1) % 2 == 0">
+							<!--商品列表-->
+							<view class="tui-pro-item" hover-class="hover" :hover-start-time="150" @tap="detail">
+								<image :src="'/static/images/mall/product/' + item.img + '.jpg'" class="tui-pro-img" mode="widthFix" />
+								<view class="tui-pro-content">
+									<view class="tui-pro-tit">{{ item.name }}</view>
+									<view>
+										<view class="tui-pro-price">
+											<text class="tui-sale-price">￥{{ item.sale }}</text>
+											<text class="tui-factory-price">￥{{ item.factory }}</text>
+										</view>
+										<view class="tui-pro-pay">{{ item.payNum }}人付款</view>
 									</view>
-									<view class="tui-pro-pay">{{ item.payNum }}人付款</view>
 								</view>
 							</view>
-						</view>
-						<!--商品列表-->
-					</block>
+							<!--商品列表-->
+						</block>
+					</template>
 				</view>
 			</view>
 		</view>
