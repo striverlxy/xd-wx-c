@@ -1,9 +1,10 @@
 <template>
 	<view>
 		<view class="tui-header" :style="{opacity:opacity}">
-			<view class="tui-category" hover-class="opcity" :hover-stay-time="150" @tap="classify">
-				<tui-icon name="manage-fill" color="#fff" :size="44" unit="rpx"></tui-icon>
-				<view class="tui-category-scale">分类</view>
+			<view class="location">
+				<tui-icon class="mgr-10" name="gps" color="#fff" :size="30" unit="rpx"></tui-icon>
+				<view class="mgr-10">梅山村邱村69号</view>
+				<view>></view>
 			</view>
 			<view class="tui-rolling-search">
 				<tui-icon name="search-2" :size="32" unit="rpx"></tui-icon>
@@ -263,13 +264,16 @@
 		flex-wrap: nowrap;
 		color: #999;
 	}
-	.tui-category {
+	
+	.mgr-10 {
+		margin-right: 10rpx;
+	}
+	.location {
 		font-size: 24rpx;
 		color: #fff;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		flex-direction: column;
 		margin: 0;
 		margin-right: 22rpx;
 		flex-shrink: 0;
