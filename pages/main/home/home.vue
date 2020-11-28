@@ -17,12 +17,11 @@
 		</view>
 		<!--header-->
 		<view class="tui-header-banner">
-			<view class="tui-hot-search">
-				<view>热搜</view>
-				<view class="tui-hot-tag" @tap="search">自热火锅</view>
-				<view class="tui-hot-tag" @tap="search">华为手机</view>
-				<view class="tui-hot-tag" @tap="search">有机酸奶</view>
-				<view class="tui-hot-tag" @tap="search">苹果手机</view>
+			<view class="platform-service">
+				<view class="service-tag">农场直供</view>
+				<view class="service-tag">新鲜速达</view>
+				<view class="service-tag">零差价</view>
+				<view class="service-tag">精心挑选</view>
 			</view>
 			<view class="tui-banner-bg">
 				<view class="tui-primary-bg tui-route-left"></view>
@@ -317,7 +316,7 @@
 		background: #e41f19;
 	}
 	
-	.tui-hot-search {
+	.platform-service {
 		color: #fff;
 		font-size: 24rpx;
 		display: flex;
@@ -329,7 +328,7 @@
 		z-index: 2;
 	}
 	
-	.tui-hot-tag {
+	.service-tag {
 		background-color: rgba(255, 255, 255, 0.15);
 		padding: 10rpx 24rpx;
 		border-radius: 30rpx;
