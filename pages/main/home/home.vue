@@ -38,10 +38,10 @@
 			</view>
 		</view>
 		
-		<view class="tui-product-category">
-			<view class="tui-category-item" v-for="(item, index) in category" :key="index" :data-key="item.name" @tap="more">
-				<image :src="'https://thorui.cn/images/mall/category/' + item.img" class="tui-category-img" mode="scaleToFill"></image>
-				<view class="tui-category-name">{{ item.name }}</view>
+		<view class="special-page">
+			<view class="special-page-item" v-for="(item, index) in category" :key="index" :data-key="item.name" @tap="more">
+				<image :src="'https://thorui.cn/images/mall/category/' + item.img" class="special-page-img" mode="scaleToFill"></image>
+				<view class="special-page-name">{{ item.name }}</view>
 			</view>
 		</view>
 		
@@ -112,43 +112,19 @@
 				banner: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'],
 				category: [{
 						img: '1.png',
-						name: '短袖T恤'
+						name: '健康饮食'
 					},
 					{
 						img: '2.png',
-						name: '足球'
+						name: '为您优选'
 					},
 					{
 						img: '3.png',
-						name: '运动鞋'
+						name: '瘦身食材'
 					},
 					{
 						img: '4.png',
-						name: '中老年'
-					},
-					{
-						img: '5.png',
-						name: '甜美风'
-					},
-					{
-						img: '6.png',
-						name: '鱼尾裙'
-					},
-					{
-						img: '7.png',
-						name: '相机配件'
-					},
-					{
-						img: '8.png',
-						name: '护肤套装'
-					},
-					{
-						img: '9.png',
-						name: '单肩包'
-					},
-					{
-						img: '10.png',
-						name: '卫衣'
+						name: '鲜道服务'
 					}
 				],
 				productList: [{
@@ -161,48 +137,6 @@
 					{
 						img: 2,
 						name: '德国DMK进口牛奶  欧德堡（Oldenburger）超高温处理全脂纯牛奶1L*12盒',
-						sale: 29,
-						factory: 69,
-						payNum: 999
-					},
-					{
-						img: 3,
-						name: '【第2支1元】柔色尽情丝柔口红唇膏女士不易掉色保湿滋润防水 珊瑚红',
-						sale: 299,
-						factory: 699,
-						payNum: 666
-					},
-					{
-						img: 4,
-						name: '百雀羚套装女补水保湿护肤品',
-						sale: 1599,
-						factory: 2899,
-						payNum: 236
-					},
-					{
-						img: 5,
-						name: '百草味 肉干肉脯 休闲零食 靖江精制猪肉脯200g/袋',
-						sale: 599,
-						factory: 899,
-						payNum: 2399
-					},
-					{
-						img: 6,
-						name: '短袖睡衣女夏季薄款休闲家居服短裤套装女可爱韩版清新学生两件套 短袖粉色长颈鹿 M码75-95斤',
-						sale: 599,
-						factory: 899,
-						payNum: 2399
-					},
-					{
-						img: 1,
-						name: '欧莱雅（LOREAL）奇焕光彩粉嫩透亮修颜霜',
-						sale: 599,
-						factory: 899,
-						payNum: 2342
-					},
-					{
-						img: 2,
-						name: '德国DMK进口牛奶',
 						sale: 29,
 						factory: 69,
 						payNum: 999
@@ -389,7 +323,7 @@
 		display: block;
 	}
 	
-	.tui-product-category {
+	.special-page {
 		padding: 80rpx 20rpx 30rpx 20rpx;
 		box-sizing: border-box;
 		display: flex;
@@ -401,7 +335,7 @@
 		/* margin-bottom: 20rpx; */
 	}
 	
-	.tui-category-item {
+	.special-page-item {
 		width: 20%;
 		height: 118rpx;
 		display: flex;
@@ -411,13 +345,13 @@
 		padding-top: 30rpx;
 	}
 	
-	.tui-category-img {
+	.special-page-img {
 		height: 80rpx;
 		width: 80rpx;
 		display: block;
 	}
 	
-	.tui-category-name {
+	.special-page-name {
 		line-height: 24rpx;
 	}
 	.tui-product-box {
