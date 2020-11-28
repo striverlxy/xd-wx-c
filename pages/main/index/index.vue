@@ -1,5 +1,6 @@
 <template>
 	<view class="container">
+		<home />
 		<!--tabbar-->
 		<view class="tui-tabbar">
 			<block v-for="(item, index) in tabbar" :key="index">
@@ -16,7 +17,11 @@
 </template>
 
 <script>
+	
+	import home from '../home/home.vue'
+	
 	export default {
+		components: {home},
 		data() {
 			return {
 				current: 0,
@@ -105,4 +110,60 @@
 		color: #666;
 		height: 80rpx;
 	}
+	
+	/* home页面轮播图更改样式 start */
+	
+	/* #ifdef MP-WEIXIN */
+	.tui-banner-swiper .wx-swiper-dot {
+		width: 8rpx;
+		height: 8rpx;
+		display: inline-flex;
+		background: none;
+		justify-content: space-between;
+	}
+	
+	.tui-banner-swiper .wx-swiper-dot::before {
+		content: '';
+		flex-grow: 1;
+		background-color: rgba(255, 255, 255, 0.8);
+		border-radius: 16rpx;
+		overflow: hidden;
+	}
+	
+	.tui-banner-swiper .wx-swiper-dot-active::before {
+		background-color: #fff;
+	}
+	
+	.tui-banner-swiper .wx-swiper-dot.wx-swiper-dot-active {
+		width: 16rpx;
+	}
+	/* #endif */
+	
+	/* #ifndef MP-WEIXIN */
+	>>>.tui-banner-swiper .uni-swiper-dot {
+		width: 8rpx;
+		height: 8rpx;
+		display: inline-flex;
+		background-color: none;
+		justify-content: space-between;
+	}
+	
+	>>>.tui-banner-swiper .uni-swiper-dot::before {
+		content: '';
+		flex-grow: 1;
+		background-color: rgba(255, 255, 255, 0.8);
+		border-radius: 16rpx;
+		overflow: hidden;
+	}
+	
+	>>>.tui-banner-swiper .uni-swiper-dot-active::before {
+		background-color: #fff;
+	}
+	
+	>>>.tui-banner-swiper .uni-swiper-dot.uni-swiper-dot-active {
+		width: 16rpx;
+	}
+	
+	/* #endif */
+	/* home页面轮播图更改样式 end */
 </style>
