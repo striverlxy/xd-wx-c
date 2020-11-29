@@ -96,6 +96,16 @@
 			</view>
 		</view>
 		
+		<!-- 底部显示最近配送站点 -->
+		<view class="nearStation">
+			<view class="nearStation-address">
+				当前配送站点：南京市雨花台区板桥配送点<tui-tag margin="0 0 0 10rpx" padding="5rpx" size="16rpx" type="danger">最近</tui-tag>
+			</view>
+			<view @tap="gotoChooseStationPage">
+				更改 >
+			</view>
+		</view>
+		
 		<!--加载loadding-->
 		<tui-loadmore v-if="loadding" :index="3" type="red"></tui-loadmore>
 		<!-- <tui-nomore v-if="!pullUpOn"></tui-nomore> -->
@@ -168,6 +178,11 @@
 					url: "/pages/pages-home/pages/search/search"
 				})
 			},
+			gotoChooseStationPage() {
+				uni.navigateTo({
+					url: "/pages/pages-home/pages/chooseStation/chooseStation"
+				})
+			}
 		},
 	}
 </script>
@@ -182,7 +197,7 @@
 		height: 100rpx;
 		padding: 0 30rpx 0 20rpx;
 		box-sizing: border-box;
-		background-color: #e41f19;
+		background-color: #51b121;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -253,7 +268,7 @@
 	.tui-header-banner {
 		padding-top: 100rpx;
 		box-sizing: border-box;
-		background: #e41f19;
+		background: #51b121;
 	}
 	
 	.platform-service {
@@ -281,7 +296,7 @@
 	.tui-banner-bg {
 		display: flex;
 		height: 180rpx;
-		background-color: #e41f19;
+		background-color: #51b121;
 		position: relative;
 	}
 	
@@ -292,7 +307,7 @@
 		border: 1px solid transparent;
 		position: relative;
 		z-index: 1;
-		background-color: #e41f19;
+		background-color: #51b121;
 	}
 	
 	.tui-route-left {
@@ -449,5 +464,25 @@
 		padding-top: 10rpx;
 		font-size: 24rpx;
 		color: #656565;
+	}
+	
+	.nearStation {
+		width: 100%;
+		padding: 18rpx 20rpx;
+		box-sizing: border-box;
+		position: fixed;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 9999;
+		color: #fff;
+		background: #52c41a;
+		font-size: 21rpx;
+		left: 0;
+		bottom: 100rpx;
+	}
+	.nearStation-address {
+		display: flex;
+		align-items: center;
 	}
 </style>

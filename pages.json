@@ -16,6 +16,12 @@
 					"style": {
 						"navigationBarTitleText": "搜索页"
 					}
+				},
+				{
+					"path": "pages/chooseStation/chooseStation",
+					"style": {
+						"navigationBarTitleText": "选择配送站点"
+					}
 				}
 			]
 		}
