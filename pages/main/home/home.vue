@@ -162,7 +162,13 @@
 				opacity: 1
 			}
 		},
-		methods: {},
+		methods: {
+			search() {
+				uni.navigateTo({
+					url: "/pages/pages-home/pages/search/search"
+				})
+			},
+		},
 	}
 </script>
 

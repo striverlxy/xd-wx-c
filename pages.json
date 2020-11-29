@@ -7,19 +7,19 @@
 			}
 		}
 	],
-	// "subPackages": [
-	// 	{
-	// 		"root": "pages-home",
-	// 		"pages": [
-	// 			{
-	// 				"path": "pages/test/test",
-	// 				"style": {
-	// 					"navigationBarTitleText": "test"
-	// 				}
-	// 			}
-	// 		]
-	// 	},
-	// ],
+	"subPackages": [
+		{
+			"root": "pages/pages-home",
+			"pages": [
+				{
+					"path": "pages/search/search",
+					"style": {
+						"navigationBarTitleText": "搜索页"
+					}
+				}
+			]
+		}
+	],
 	"easycom": {
 		"autoscan": true,
 		"custom": {
